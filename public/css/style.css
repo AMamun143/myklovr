@@ -25,3 +25,18 @@
     margin-bottom: 40px !important;
     /*margin-left: 50px !important;*/
 }
+
+/*.your-centered-div {
+    min-width: 460px; 
+    min-height: 315px;
+
+    position: absolute; 
+    top: 0; right: 0; 
+    bottom: 100; left: 0;
+    margin: auto; 
+}*/
+
+.formback {
+    width: 100%;
+    height: 300px;
+}  
