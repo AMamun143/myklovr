@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
 mongoose.connect('localhost:27017/test');
-// mongoose.connect('mongodb://mamunnyc:nitu143m@ds033337.mongolab.com:33337/myklovr');
+// mongoose.connect ('mongodb://mamunnyc:nitu143m@ds033337.mongolab.com:33337/myklovr');
 
 var Schema = mongoose.Schema;
 
@@ -33,25 +33,25 @@ var MyklovrData = mongoose.model('MyklovrData', myklovrDataSchema);
 
 /* routes. */
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index');
-});
+// router.get('/', function(req, res, next) {
+//   res.render('index');
+// });
 
-router.get('/ambassador', function(req, res, next) {
-  res.render('ambassador');
-});
+// router.get('/ambassador', function(req, res, next) {
+//   res.render('ambassador');
+// });
 
-router.get('/business', function(req, res, next) {
-  res.render('business');
-});
+// router.get('/business', function(req, res, next) {
+//   res.render('business');
+// });
 
-router.get('/schools', function(req, res, next) {
-  res.render('schools');
-});
+// router.get('/schools', function(req, res, next) {
+//   res.render('schools');
+// });
 
-router.get('/educators', function(req, res, next) {
-  res.render('educators');
-});
+// router.get('/educators', function(req, res, next) {
+//   res.render('educators');
+// });
 
 
 

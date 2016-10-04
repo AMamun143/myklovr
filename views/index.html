@@ -31,6 +31,18 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+<style>
+  .modal-header, h4, .close {
+      background-color: #5cb85c;
+      color:white !important;
+      text-align: center;
+      font-size: 30px;
+  }
+  .modal-footer {
+      background-color: #f9f9f9;
+  }
+  </style>
+  
 
 </head>
 <body id="page-top" class="index">
@@ -110,7 +122,7 @@
                             <form class="form-horizontal">
                             <div class="insert">
                             <h3>Or</h3>
-                            <form action="/insert" method="post">
+                            <form action="/signup" method="post">
                             <div class="input">
                             <label class="control-label col-sm-3" for="firstname"><h5>First Name:</h5></label>
                             <div class="col-sm-8">
@@ -137,7 +149,7 @@
                 <img src="/img/home2.png" class="img-responsive" alt="Ambassador of the Month" height="400px" width="100%">
                
                 <img src="/img/home3.png" class="img-responsive" alt="Ambassador of the Month" height="400px" width="100%">
-            {{!-- </div> --}}
+           <!--  </div> -->
         </div>
     </header>
 
@@ -149,9 +161,9 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Our Mission</h2>
-                    <h3 class="section-subheading">MyKlovr's mission is to empower students and their parents to take ownership over their destiny and discover how their decisions today can impact their future potential, while providing schools and companies with multiple efficiency solutions.</h3>
+                    <p>MyKlovr's mission is to empower students and their parents to take ownership over their destiny and discover how their decisions today can impact their future potential, while providing schools and companies with multiple efficiency solutions.</p>
 
-                    <h3 class="section-subheading {{!-- text-muted --}}">We have created the ONLY all-purpose interactive self-serve proprietary data enabled recommendation platform which connects users to personalized tools, services, and resources to achieve their personal goals.</h3></div>
+                    <p>We have created the ONLY all-purpose interactive self-serve proprietary data enabled recommendation platform which connects users to personalized tools, services, and resources to achieve their personal goals.</p></div>
                     </div>
                     </div>
                     <img src="/img/mission.png" class="img-responsive" alt="Ambassador of the Month" height="400px" width="100%"></div>
@@ -169,20 +181,20 @@
                 <div class="col-lg-12 text-center">
                     <h2>Brand Ambassador Program</h2>
                     <!-- <div class="col-lg-4"> -->
-                    <h3 class="section-subheading {{!-- text-muted --}}">Welcome to our community! Brand Ambassadors are the foundation at myKlovr. As a myKlovr brand ambassador, you'll gain experience in traditional and digital marketing of our growing community, first access to HQ internship and job opportunities, gain Premium access to our product once we launch, and opportunities to be nominated and featured as a myKlovr brand ambassador of the month.</h3>
+                    <h3 class="section-subheading text-muted">Welcome to our community! Brand Ambassadors are the foundation at myKlovr. As a myKlovr brand ambassador, you'll gain experience in traditional and digital marketing of our growing community, first access to HQ internship and job opportunities, gain Premium access to our product once we launch, and opportunities to be nominated and featured as a myKlovr brand ambassador of the month.</h3>
                    
                    <h3>We would love to have you in our community!</h3>
-                   <h3 class="section-subheading {{!-- text-muted --}}">We are looking to empower pre-professionals to achieve their academic, personal and professional goals. We are seeking applicants to help increase brand awareness on your campus and inform students of the opportunities available to them with MyKlovr.</h3>
+                   <h3 class="section-subheading text-muted">We are looking to empower pre-professionals to achieve their academic, personal and professional goals. We are seeking applicants to help increase brand awareness on your campus and inform students of the opportunities available to them with MyKlovr.</h3>
 
                    <h3>How can you help our community grow?</h3>
-                   <h3 class="section-subheading {{!-- text-muted --}}">Let's grow our community by:<br>
+                   <h3 class="section-subheading text-muted">Let's grow our community by:<br>
                    Creating your own University specific marketing plan for the semester, Contributing to the online discussion about myKlovr through social media channels, Helping to expand the myKlovr community by signing up 25 members each month, Committing to monthly online meetings with the myKlovr team, and Using your free accress to the Premium version of our product to show others the benefit of the product!</h3>
 
                    <div class="embed-responsive embed-responsive-16by9">
                    <iframe width="300" height="200" src="https://www.youtube.com/embed/d12T-f5EDkU" frameborder="0" allowfullscreen></iframe></div>
 
                    <h3>Who should apply?</h3>
-                   <h3 class="section-subheading {{!-- text-muted --}}">Full-time undergraduate students with an interest in marketing and has strong social interpersonal communication and writing skills.</h3>
+                   <h3 class="section-subheading text-muted">Full-time undergraduate students with an interest in marketing and has strong social interpersonal communication and writing skills.</h3>
 
                    <h3>Meet myKlovr Brand Ambassador of the Month</h3>
                    <div class="col-lg-4">
@@ -193,9 +205,60 @@
                    <h3 class="section-subheading text-muted">-Cho Yee Win Aung</br>
                    Brand Ambassador & Digital Marketing Intern</h3>
 
-                   <h3>Sign up to become a myKlovr brand ambassador</h3>
+                   <!-- <h3>Sign up to become a myKlovr brand ambassador</h3>
 
-                    <a href="ambassador" class="page-scroll btn btn-xl" target="_blank">Sign Up Now</a></div>
+                   
+
+                    <a href="ambassador" class="page-scroll btn btn-xl" target="_blank">Sign Up Now</a></div> -->
+
+                    <h3>Sign up to become a myKlovr brand ambassador</h3>
+                        <!-- Trigger the modal with a button -->
+                        <!-- <div class="col-lg-12 text-center">
+                         <button type="button" class="page-scroll btn btn-x1" id="myBtn">Sign Up Now</button></div> -->
+
+                         <div class="col-lg-12 text-center">
+                        <button type="button" class="page-scroll btn btn-xl" id="myBtn">Sign Up Now</button></div>
+
+                         <!-- Modal -->
+                        <div class="modal fade" id="myModal" role="dialog">
+                        <div class="modal-dialog">
+    
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                        <div class="modal-header" style="padding:35px 50px;">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4><span class="glyphicon glyphicon-lock"></span>BRAND AMBASSADOR</h4>
+                        </div>
+                        <div class="modal-body" style="padding:40px 50px;">
+                        <form role="form">
+                        <div class="form-group">
+                        <label for="name"><span class="glyphicon glyphicon-user"></span>Name:</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                        </div>
+                        <div class="form-group">
+                        <label for="email"><span class="glyphicon glyphicon-eye-open"></span>Email:</label>
+                        <input type="text" class="form-control" id="email" placeholder="Enter your email">
+                        </div>
+                        <div class="form-group">
+                        <label for="school"><span class="glyphicon glyphicon-eye-open"></span>School/University:</label>
+                        <input type="text" class="form-control" id="school" placeholder="Enter your School/University">
+                        </div>
+                        <!-- <div class="checkbox">
+                        <label><input type="checkbox" value="" checked>Remember me</label> -->
+                        <!-- </div> -->
+                        <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span>Submit</button>
+                        </form>
+                        </div>
+                        <div class="modal-footer">
+                        <button type="submit" class="btn btn-default btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+          <!-- <p>Not a member? <a href="#">Sign Up</a></p>
+          <p>Forgot <a href="#">Password?</a></p> -->
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
             </div>
             
         </div>
@@ -209,15 +272,62 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Business</h2>
-                    <h3 class="section-subheading {{!-- text-muted --}}">We help companies unlock and realize hidden value.  We do so by applying proprietary mathematical and statistical models coupled with innovative computer techniques and running statistical analysis to identify anomalies and hidden revenue opportunities. We are happy to show you.</h3></div>
+                    <h3 class="section-subheading text-muted">We help companies unlock and realize hidden value.  We do so by applying proprietary mathematical and statistical models coupled with innovative computer techniques and running statistical analysis to identify anomalies and hidden revenue opportunities. We are happy to show you.</h3></div>
                     </div>
                     </div>
 
                     <img src="/img/business.png" class="img-responsive" alt="Ambassador of the Month" height="400px" width="100%">
 
-                    <div class="col-lg-12 text-center">
-                    <a href="business" class="page-scroll btn btn-xl" target="_blank">Sign Up Now</a></div>
+                    <!-- <div class="col-lg-12 text-center">
+                    <a href="business" class="page-scroll btn btn-xl" target="_blank">Sign Up Now</a></div> -->
+
+                      <!--  Trigger the modal with a button -->
+                        <!-- <div class="col-lg-12 text-center">
+                         <button type="button" class="page-scroll btn btn-x1" id="business">Sign Up Now</button></div> -->
+
+                         <div class="col-lg-12 text-center">
+                        <button type="button" class="page-scroll btn btn-xl" id="myBtnBusiness">Sign Up Now</button></div>
+
+                         <!-- Modal -->
+                        <div class="modal fade" id="myBusiness" role="dialog">
+                        <div class="modal-dialog">
+    
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                        <div class="modal-header" style="padding:35px 50px;">
+                        <button type="button" class="close" data-dismiss="modal"></button>
+                        <h4><span class="glyphicon glyphicon-lock"></span>BUSINESS</h4>
+                        </div>
+                        <div class="modal-body" style="padding:40px 50px;">
+                        <form role="form">
+                        <div class="form-group">
+                        <label for="name"><span class="glyphicon glyphicon-user"></span>Name:</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                        </div>
+                        <div class="form-group">
+                        <label for="email"><span class="glyphicon glyphicon-eye-open"></span>Email:</label>
+                        <input type="text" class="form-control" id="email" placeholder="Enter your email">
+                        </div>
+                        <div class="form-group">
+                        <label for="companytitle"><span class="glyphicon glyphicon-eye-open"></span>Company title:</label>
+                        <input type="text" class="form-control" id="companytitle" placeholder="Enter your company title">
+                        </div>
+                        <div class="form-group">
+                        <label for="companyname"><span class="glyphicon glyphicon-eye-open"></span>Company name:</label>
+                        <input type="text" class="form-control" id="companyname" placeholder="Enter your company name">
+                        </div>
+                        <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span>Submit</button>
+                        </form>
+                        </div>
+                        <div class="modal-footer">
+                        <button type="submit" class="btn btn-default btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                        </div>
         </div>
+
     </section>
 
     <!-- Team Section -->
@@ -228,14 +338,62 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Schools & Universities</h2>
-                    <h3 class="section-subheading {{!-- text-muted --}}">We help schools and universities unlock and realize hidden value.  We do so by applying proprietary mathematical and statistical models coupled with innovative computer techniques and running statistical analysis to identify anomalies and hidden revenue opportunities. We are happy to show you.</h3></div>
+                    <h3 class="section-subheading text-muted">We help schools and universities unlock and realize hidden value.  We do so by applying proprietary mathematical and statistical models coupled with innovative computer techniques and running statistical analysis to identify anomalies and hidden revenue opportunities. We are happy to show you.</h3></div>
                     </div>
                     </div>
 
                     <img src="/img/schools.png" class="img-responsive" alt="Ambassador of the Month" height="400px" width="100%">
 
-                    <div class="col-lg-12 text-center">
-                    <a href="schools" class="page-scroll btn btn-xl" target="_blank">Sign Up Now</a></div>
+                    <!-- <div class="col-lg-12 text-center">
+                    <a href="schools" class="page-scroll btn btn-xl" target="_blank">Sign Up Now</a></div> -->
+                    <!-- </div> -->
+                        <div class="col-lg-12 text-center">
+                        <button type="button" class="page-scroll btn btn-xl" id="myBtnSchools">Sign Up Now</button></div>
+
+                         <!-- Modal -->
+                        <div class="modal fade" id="mySchools" role="dialog">
+                        <div class="modal-dialog">
+    
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                        <div class="modal-header" style="padding:35px 50px;">
+                        <button type="button" class="close" data-dismiss="modal"></button>
+                        <h4><span class="glyphicon glyphicon-lock"></span>School/University</h4>
+                        </div>
+                        <div class="modal-body" style="padding:40px 50px;">
+                        <form role="form">
+                        <div class="form-group">
+                        <label for="name"><span class="glyphicon glyphicon-user"></span>Name:</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                        </div>
+                        <div class="form-group">
+                        <label for="email"><span class="glyphicon glyphicon-eye-open"></span>Email:</label>
+                        <input type="text" class="form-control" id="email" placeholder="Enter your email">
+                        </div>
+                        <div class="form-group">
+                        <label for="schooltitle"><span class="glyphicon glyphicon-eye-open"></span>School/University title:</label>
+                        <input type="text" class="form-control" id="schooltitle" placeholder="Enter your School/University title">
+                        </div>
+                        <div class="form-group">
+                        <label for="schoolname"><span class="glyphicon glyphicon-eye-open"></span>School/University name:</label>
+                        <input type="text" class="form-control" id="schoolname" placeholder="Enter your School/University name">
+                        </div>
+                        <!-- <div class="checkbox">
+                        <label><input type="checkbox" value="" checked>Remember me</label> -->
+                        <!-- </div> -->
+                        <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span>Submit</button>
+                        </form>
+                        </div>
+                        <div class="modal-footer">
+                        <button type="submit" class="btn btn-default btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+            </div>
+            
         </div>
     </section>
 
@@ -247,15 +405,61 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Educators</h2>
-                    <h3 class="section-subheading {{!-- text-muted --}}">Ready to help your students grow and see the ONLY all-purpose interactive self-serve recommendation platform at work?  We are happy to show you. </h3></div>
+                    <h3 class="section-subheading text-muted">Ready to help your students grow and see the ONLY all-purpose interactive self-serve recommendation platform at work?  We are happy to show you. </h3></div>
                     </div>
                     </div>
 
                     <img src="/img/edu1.png" class="img-responsive" alt="Ambassador of the Month" height="400px" width="100%">
                     <img src="/img/edu2.png" class="img-responsive" alt="Ambassador of the Month" height="400px" width="100%">
                     
-                    <div class="col-lg-12 text-center">
-                    <a href="educators" class="page-scroll btn btn-xl" target="_blank">Sign Up Now</a></div>
+                    <!-- <div class="col-lg-12 text-center">
+                    <a href="educators" class="page-scroll btn btn-xl" target="_blank">Sign Up Now</a></div> -->
+                        <div class="col-lg-12 text-center">
+                        <button type="button" class="page-scroll btn btn-xl" id="myBtnEducators">Sign Up Now</button></div>
+
+                         <!-- Modal -->
+                        <div class="modal fade" id="myEducators" role="dialog">
+                        <div class="modal-dialog">
+    
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                        <div class="modal-header" style="padding:35px 50px;">
+                        <button type="button" class="close" data-dismiss="modal"></button>
+                        <h4><span class="glyphicon glyphicon-lock"></span>Educators</h4>
+                        </div>
+                        <div class="modal-body" style="padding:40px 50px;">
+                        <form role="form">
+                        <div class="form-group">
+                        <label for="name"><span class="glyphicon glyphicon-user"></span>Name:</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                        </div>
+                        <div class="form-group">
+                        <label for="email"><span class="glyphicon glyphicon-eye-open"></span>Email:</label>
+                        <input type="text" class="form-control" id="email" placeholder="Enter your email">
+                        </div>
+                        <form role="form">
+                        <div class="form-group">
+                        <label for="subject"><span class="glyphicon glyphicon-user"></span>Grade/Subjects:</label>
+                        <input type="text" class="form-control" id="subject" placeholder="Enter your grade/subjects">
+                        </div>
+                        <form role="form">
+                        <div class="form-group">
+                        <label for="school"><span class="glyphicon glyphicon-user"></span>School/University:</label>
+                        <input type="text" class="form-control" id="school" placeholder="Enter your school/university name">
+                        </div>
+                        <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span>Submit</button>
+                        </form>
+                        </div>
+                        <div class="modal-footer">
+                        <button type="submit" class="btn btn-default btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+            </div>
+            
         </div>
     </section>
 
@@ -270,7 +474,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <form action="form_process.php" method="post" name="contact_form">
+                    <form action="send_form_email.php" method="post" name="contact_form">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
@@ -324,20 +528,21 @@
                         </li>
                     </ul>
                 </div>
-                {{!-- <div class="col-md-4">
+                <!-- <div class="col-md-4">
                     <ul class="list-inline quicklinks">
                         <li><a href="#">Privacy Policy</a>
                         </li>
                         <li><a href="#">Terms of Use</a>
                         </li>
                     </ul>
-                </div> --}}
+                </div> -->
             </div>
         </div>
     </footer>
 
     <!-- jQuery -->
     <script src="jquery/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
@@ -351,6 +556,22 @@
 
     <!-- Theme JavaScript -->
     <script src="js/theme.js"></script>
+    <script>
+$(document).ready(function(){
+    $("#myBtn").click(function(){
+        $("#myModal").modal();
+    });
+    $("#myBtnBusiness").click(function(){
+        $("#myBusiness").modal();
+    });
+    $("#myBtnSchools").click(function(){
+        $("#mySchools").modal();
+    });
+      $("#myBtnEducators").click(function(){
+        $("#myEducators").modal();
+    });
+});
+</script>
 
 </html>
 
@@ -362,7 +583,7 @@
 
 
 
-
+<!-- 
 
 
 {{!-- <h1>MONGODB - EXERCISE</h1>
@@ -430,4 +651,4 @@
         </div>
         <button type="submit">DELETE</button>
     </form>
-</section> --}}
+</section> --}} -->
