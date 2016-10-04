@@ -26,15 +26,18 @@
     /*margin-left: 50px !important;*/
 }
 
-/*.your-centered-div {
-    min-width: 460px; 
-    min-height: 315px;
+p {
+    font-size: 16px;
+    color: #FFA500;
+}
 
-    position: absolute; 
-    top: 0; right: 0; 
-    bottom: 100; left: 0;
-    margin: auto; 
-}*/
+h3, h2 {
+    color: #FFA500 !important;
+}
+
+.placeholder {
+    color: #FFA500 !important;
+}
 
 .formback {
     width: 100%;

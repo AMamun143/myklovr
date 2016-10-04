@@ -28,31 +28,41 @@ var myklovrDataSchema = new Schema({
 
 var MyklovrData = mongoose.model('MyklovrData', myklovrDataSchema);
 
+/* myklovr contact-form schema. */
+var myklovrContactSchema = new Schema({
+  name: String,
+  email: String,
+  phone: String,
+  message: String
+}, {collection: 'contact-data'});
 
-
+var myklovrContact = mongoose.model('myklovrContact', myklovrContactSchema);
 
 /* routes. */
 /* GET home page. */
 // router.get('/', function(req, res, next) {
-//   res.render('index');
+//   res.render('views/index.html');
 // });
 
 // router.get('/ambassador', function(req, res, next) {
-//   res.render('ambassador');
+//   res.render('views/index.html');
 // });
 
 // router.get('/business', function(req, res, next) {
-//   res.render('business');
+//   res.render('views/index.html');
 // });
 
 // router.get('/schools', function(req, res, next) {
-//   res.render('schools');
+//   res.render('views/index.html');
 // });
 
 // router.get('/educators', function(req, res, next) {
-//   res.render('educators');
+//   res.render('views/index.html');
 // });
 
+// router.get('/insertcontact', function(req, res, next) {
+//   res.render('views/index.html');
+// });
 
 
 /* user form insert. */
@@ -187,4 +197,27 @@ router.post('/inserteducator', function(req, res, next) {
 
   res.redirect('/');
 });
+
+/* business form insert. */
+router.get('/get-data', function(req, res, next) {
+  myklovrContactData.find()
+      .then(function(doc) {
+        res.render('index', {items: doc});
+      });
+});
+
+router.post('/insertcontact', function(req, res, next) {
+  var item = {
+    name: req.body.name,
+    email: req.body.email,
+    phone: req.body.phone,
+    message: req.body.message
+  };
+
+  var data = new myklovrContact(item);
+  data.save();
+
+  res.redirect('/');
+});
+
 module.exports = router;
