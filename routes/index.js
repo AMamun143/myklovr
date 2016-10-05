@@ -214,7 +214,7 @@ router.post('/insertcontact', function(req, res, next) {
     message: req.body.message
   };
 
-  var data = new myklovrContact(item);
+  var data = new myklovrContactData(item);
   data.save();
 
   res.redirect('/');
